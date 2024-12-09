@@ -9,7 +9,7 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command, StateFilter
 from aiogram.types import Message
 from Services.TestService import router
-from commands import set_commands
+from Commands import set_commands
 
 # Замените 'YOUR_TOKEN' на ваш токен, который вы получили от BotFather
 API_TOKEN = '7799232127:AAFLb6fVSzTAOnbrnf8dP0YMiaFGraB4Y3g'
