@@ -9,6 +9,7 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command, StateFilter
 from aiogram.types import Message
 from Services.TestService import router
+from commands import set_commands
 
 # Замените 'YOUR_TOKEN' на ваш токен, который вы получили от BotFather
 API_TOKEN = '7799232127:AAFLb6fVSzTAOnbrnf8dP0YMiaFGraB4Y3g'
@@ -22,6 +23,7 @@ async def command_start_handler(message: Message) -> None:
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
     bot = Bot(token=API_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    await set_commands(bot)
 
     # And the run events dispatching
     await dp.start_polling(bot)
